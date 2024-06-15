@@ -1,0 +1,145 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --bg: #f9f9f9;
+    --gray_p: gray;
+    --white: #fff;
+    --txt_color: #2a2a2e;
+    --red: #e74a3b;
+    --orange: #f5983a;
+    --black: #08090b;
+    --blue: #4285f4;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: var(--txt_color);
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+    padding: 10px;
+    background-color: transparent;
+    position: fixed;
+
+}
+
+nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 20px;
+}
+
+nav a.router-link-active {
+    font-weight: bold;
+    border-bottom: 3px solid var(--orange);
+    border-radius: 2px;
+}
+
+pre {
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    text-align: start;
+    white-space: pre-wrap;
+}
+.body-text .title{
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Alkatra', cursive;
+}
+.body-text .txt{
+    font-size: 20px;
+}
+.parent {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.parent::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--txt_color));
+}
+
+.parent img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.body-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 8px;
+    width: 100%;
+}
+
+@media (min-width: 550px) {
+    .parent {
+        padding-bottom: 0;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+    .body-text .title{
+        font-size: 45px;
+    }
+    .body-text .txt{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 850px) {
+    .parent {
+        padding-bottom: 0;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+    .body-text .title{
+        font-size: 55px;
+    }
+    .body-text .txt{
+        font-size: 30px;
+    }
+}
+
+.slogan{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+}
+.slogan .ogi{
+    font-family: 'Ubuntu';
+}
